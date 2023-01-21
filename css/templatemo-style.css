@@ -716,6 +716,7 @@ input:checked + .slider::before {
     padding: 0 1rem 0 .5rem;
 }
 
+
 .project-image{
     float: right;
     max-width: 50%;
@@ -737,6 +738,22 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
+/*
+R&D
+*/
+
+.project-content2 {
+  text-align: justify;
+  padding: 0 9rem 0 3rem;
+}
+
+.project-content2 figure .text-hover h3{
+    cursor: pointer;
+}
+
+/*
+R&D
+*/
 
 .project-image figure .text-hover{
     position: absolute;
