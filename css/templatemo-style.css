@@ -743,8 +743,8 @@ R&D
 */
 
 .project-content2 {
-  
-  padding: 0 7rem 0 3rem;
+  text-align: justify;
+  padding: 0 12rem 0 3rem;
 }
 
 .project-content2 figure .text-hover h3{
