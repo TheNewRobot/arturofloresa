@@ -1,3 +1,4 @@
+/*
 .banner-bg {
 	padding: 260px 80px;
 	position: relative;
@@ -6,6 +7,24 @@
 	background-position: center;
 	background-size: cover;
 	z-index: 2;
+}
+
+*/
+.banner-bg {
+	padding: 260px 80px;
+	position: relative;
+	z-index: 2;
+}
+
+.banner-bg video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.4; /* Adjust the opacity value as desired (0.0 to 1.0) */
+	z-index: 1;
 }
 
 .banner-overlay {
