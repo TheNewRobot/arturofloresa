@@ -1,0 +1,16 @@
+.welcome-text {
+    text-align: center; /* Center the text horizontally */
+}
+
+.color-changing-text {
+    display: inline-block;
+    animation: rainbow 5s infinite linear;
+}
+
+@keyframes rainbow {
+    0% { color: #87CEFA; } /* LightSkyBlue */
+    25% { color: #98FB98; } /* PaleGreen */
+    50% { color: #FFD700; } /* Gold */
+    75% { color: #FFA07A; } /* LightSalmon */
+    100% { color: #ADD8E6; } /* LightBlue */
+}
