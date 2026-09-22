@@ -171,19 +171,14 @@ p:last-child { margin-bottom: 0; }
 /* ---------- masthead ---------- */
 .masthead {
   display: flex;
-  gap: 34px;
+  gap: 30px;
   align-items: flex-start;
-  padding: 48px 0 40px;
-}
-
-.masthead-aside {
-  flex: none;
-  width: 260px;
+  padding: 44px 0 30px;
 }
 
 .portrait {
-  width: 260px;
-  height: 260px;
+  width: 212px;
+  height: 212px;
   flex: none;
   object-fit: cover;
   border-radius: 3px;
@@ -208,21 +203,28 @@ h1 {
   margin: 0 0 18px;
 }
 
-/* vertical stack under the portrait — the inline row wrapped badly and
-   orphaned links once there were five of them */
+/* One row under the title. It wrapped badly before because the labels were
+   long ("Google Scholar", "Curriculum Vitae"), not because the row was wrong;
+   short labels fit on a single line and keep the masthead compact. */
 .contact {
   list-style: none;
-  margin: 14px 0 0;
+  margin: 0;
   padding: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-size: 0.92rem;
 }
-.contact li {
-  padding: 4px 0;
-  border-bottom: 1px solid var(--rule-soft);
-  overflow-wrap: anywhere;
+.contact li { white-space: nowrap; }
+.contact li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.8em;
+  background: var(--rule);
+  margin: 0 12px;
+  vertical-align: -0.05em;
 }
-.contact li:last-child { border-bottom: none; }
 .contact a { border-bottom: none; }
 .contact a:hover { text-decoration: underline; }
 
@@ -258,7 +260,9 @@ h1 {
 .lineup-baseline {
   height: 0;
   border-top: 1.5px solid var(--accent);
-  margin-left: var(--plot-pad);
+  /* no margin-left: .lineup-wrap's padding already provides the axis gutter.
+     Adding it here too shifted the baseline and labels 46px right of the
+     robots — worst at the left end, nearly invisible at the right. */
 }
 
 .lineup-scale {
@@ -333,7 +337,6 @@ h1 {
 .robot-labels {
   display: flex;
   gap: 4px;
-  margin-left: var(--plot-pad);
   padding-top: 7px;
 }
 
@@ -519,7 +522,12 @@ h1 {
   font-size: 0.95rem;
 }
 .press li:last-child { border-bottom: none; }
-.press .venue { display: block; font-size: 0.86rem; }
+.press .translation {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.press .venue { display: block; font-size: 0.84rem; color: var(--ink-faint); }
 
 /* ---------- bio expander ---------- */
 .more[hidden] { display: none; }
@@ -577,9 +585,7 @@ footer p { margin: 0 0 4px; }
     gap: 22px;
     padding: 30px 0 28px;
   }
-  .masthead-aside { width: 100%; }
   .portrait { width: 168px; height: 168px; }
-  .contact { margin-top: 12px; }
   h1 { font-size: 1.68rem; }
 
   /* The chart shrinks to fit rather than scrolling: the whole point is seeing
