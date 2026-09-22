@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arturo M. Flores Alvarez</title>
+<meta name="description" content="Arturo M. Flores Alvarez — PhD candidate in Mechanical Engineering at UCLA (RoMeLa), Amazon AI PhD Fellow. Whole-body control and reinforcement learning for humanoid robots.">
+<meta name="author" content="Arturo M. Flores Alvarez">
+
+<meta property="og:title" content="Arturo M. Flores Alvarez">
+<meta property="og:description" content="PhD candidate, UCLA RoMeLa. Whole-body control and reinforcement learning for humanoid robots.">
+<meta property="og:type" content="profile">
+
+<link rel="icon" href="img/icon/robot.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip" href="#bio">Skip to content</a>
+
+<nav class="topnav" aria-label="Section navigation">
+  <div class="topnav-inner">
+    <span class="topnav-name">Arturo M. Flores Alvarez</span>
+    <ul>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="pdfs/Flores_Arturo_CV.pdf">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ─────────────────────────── header ─────────────────────────── -->
+  <header class="masthead">
+    <img class="portrait" src="img/headshot.jpg" width="260" height="260"
+         alt="Arturo M. Flores Alvarez">
+    <div class="masthead-text">
+      <h1>Arturo M. Flores Alvarez</h1>
+      <p class="standfirst">
+        PhD Candidate, Mechanical Engineering &middot; University of California, Los Angeles<br>
+        Robotics and Mechanisms Laboratory (RoMeLa) &middot; Amazon AI PhD Fellow
+      </p>
+      <ul class="contact">
+        <li><a href="mailto:afloresa@ucla.edu">afloresa@ucla.edu</a></li>
+        <li><a href="https://scholar.google.com/citations?user=xQZhAFsAAAAJ&amp;hl=es">Google Scholar</a></li>
+        <li><a href="https://github.com/TheNewRobot">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/afloresalv/">LinkedIn</a></li>
+        <li><a href="pdfs/Flores_Arturo_CV.pdf">Curriculum Vitae</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ─────────────────────────── bio ─────────────────────────── -->
+  <section id="bio">
+    <p>
+      I am a PhD candidate in Mechanical Engineering at UCLA, advised by
+      <a href="https://www.romela.org/dr-dennis-hong/">Dennis Hong</a> in the Robotics and
+      Mechanisms Laboratory (RoMeLa), and an Amazon AI PhD Fellow. I work on whole-body
+      control and reinforcement learning for humanoid robots, with a focus on the part that
+      tends to be hardest: getting a learned policy off the simulator and onto real hardware
+      that has to keep standing up.
+    </p>
+    <p>
+      I hold an M.S. from UCLA (2024) and a B.Sc. in Mechatronics Engineering from the
+      Universidad Nacional de Ingeniería in Lima, Peru. I have been an Applied Scientist
+      intern at <strong>Amazon Robotics</strong>, working on forceful loco-manipulation, and a
+      humanoid robotics software intern at <strong>IHMC</strong>, leading whole-body control
+      bring-up on hardware. I was an <strong>ETH RobotX Fellow</strong> in 2023, and before
+      graduate school I worked on switched control systems at UNICAMP in Brazil.
+    </p>
+  </section>
+
+  <!-- ─────────────────────────── platforms ─────────────────────────── -->
+  <section id="platforms">
+    <h2>Platforms</h2>
+    <p class="section-note">
+      Robots I have worked on, drawn to true relative height &mdash; from a 270&nbsp;g
+      quadruped to a 1.78&nbsp;m humanoid. On each one the work spans both simulation and
+      deployment on the physical machine. Select a robot for detail.
+    </p>
+
+    <div class="lineup-wrap">
+      <div class="lineup" id="lineup" role="tablist" aria-label="Robot platforms">
+        <!-- populated by js/lineup.js; see noscript fallback below -->
+      </div>
+      <div class="lineup-baseline" aria-hidden="true"></div>
+      <div class="lineup-scale" aria-hidden="true">
+        <span>0&nbsp;m</span><span>1&nbsp;m</span><span>1.8&nbsp;m</span>
+      </div>
+    </div>
+
+    <div class="platform-detail" id="platform-detail" aria-live="polite"></div>
+
+    <!-- The real content lives here, in HTML, so it is present for search
+         engines and without JavaScript. js/lineup.js hides this list and
+         builds the interactive chart from the same data. -->
+    <ul class="platform-fallback" id="platform-list">
+      <li><strong>MiNI-Q</strong> — RoMeLa, UCLA, 2026 (11 cm, 270 g). Simulation and hardware.
+        Unified learned locomotion on a 270&nbsp;g quadruped with eight continuous-rotation legs;
+        a ~26k-parameter policy runs entirely onboard a dual-ESP32 system at 50&nbsp;Hz.
+        Submitted to ICRA 2027.</li>
+      <li><strong>Booster T1</strong> — RoMeLa, UCLA, 2026 (1.18 m). Simulation and hardware.
+        Reinforcement learning and software lead for RoboCup 2026, migrating ARTEMIS&rsquo;s
+        model-based ROS2 stack to a learning-based one with an end-to-end RL locomotion
+        pipeline in Isaac Gym.</li>
+      <li><strong>Unitree G1</strong> — Amazon Robotics, 2026 (1.32 m). Simulation and hardware.
+        Whole-body control for forceful loco-manipulation, combining model predictive control,
+        control-barrier-function safety layers and learning-based methods.</li>
+      <li><strong>ARTEMIS</strong> — RoMeLa, UCLA, 2023&ndash;24 (1.42 m). Simulation and hardware.
+        Real-time computer vision and ball tracking for soccer. Winner of the Adult Size league
+        at RoboCup 2024, and first place in the Humanoid Free Walk at IEEE Humanoids 2023.</li>
+      <li><strong>Kid COSMO</strong> — RoMeLa, UCLA, 2024&ndash;25 (1.45 m). Simulation and hardware.
+        C++17 upper-body control and a C++ ONNX sim-to-real pipeline for imitation-learning
+        balance and walking. Mike Stilman Award, IEEE Humanoids 2025.</li>
+      <li><strong>Unitree H1-2</strong> — IHMC, 2025 (1.78 m). Simulation and hardware.
+        Led hardware bring-up of the whole-body control stack and built a WBMPC robustness
+        testing framework across the Nadia and H1-2 humanoids.</li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────── news ─────────────────────────── -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><span class="when">Sep 2026</span><span class="what">Finished an Applied Scientist II internship at Amazon Robotics; two papers submitted to ICRA 2027.</span></li>
+      <li><span class="when">Sep 2025</span><span class="what">Two papers at IEEE Humanoids 2025 &mdash; <em>From Screen to Stage</em> received the <strong>Mike Stilman Award</strong>.</span></li>
+      <li><span class="when">Sep 2025</span><span class="what">Completed a humanoid robotics software internship at IHMC, leading whole-body control bring-up on the H1-2.</span></li>
+      <li><span class="when">May 2025</span><span class="what">Kid COSMO won <strong>Best Exhibition</strong> at the ICRA 2025 EXPO.</span></li>
+      <li><span class="when">Jul 2024</span><span class="what">ARTEMIS won the Adult Size league at <strong>RoboCup 2024</strong> in Eindhoven.</span></li>
+      <li><span class="when">Jun 2024</span><span class="what">M.S. in Mechanical Engineering conferred at UCLA.</span></li>
+      <li class="extra"><span class="when">Dec 2023</span><span class="what">First place in the Humanoid Free Walk at IEEE Humanoids 2023, Austin.</span></li>
+      <li class="extra"><span class="when">May 2023</span><span class="what">Selected as an ETH RobotX Fellow (8.9% acceptance rate).</span></li>
+      <li class="extra"><span class="when">Dec 2022</span><span class="what">Awarded a teaching assistantship at UCLA MAE for Introduction to Programming with MATLAB.</span></li>
+      <li class="extra"><span class="when">Dec 2021</span><span class="what">Selected for REPU, a national research programme placing Peruvian undergraduates abroad.</span></li>
+      <li class="extra"><span class="when">Apr 2019</span><span class="what">Telemetry Award at the NASA Human Exploration Rover Challenge, Huntsville.</span></li>
+    </ul>
+    <button class="morebtn" id="news-more" type="button" aria-expanded="false">Show more</button>
+  </section>
+
+  <!-- ─────────────────────────── publications ─────────────────────────── -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <h3>Under review</h3>
+    <ol class="pubs">
+      <li>
+        Dang, A.*, <strong>Flores, A. M.</strong>*, et al.
+        &ldquo;HULK: Learning Whole-Body Forceful Loco-Manipulation for Humanoids.&rdquo;
+        <span class="venue">Submitted to IEEE ICRA, 2027.</span>
+      </li>
+      <li>
+        Gonzales, J., <strong>Flores, A. M.</strong>, et al.
+        &ldquo;LIMBO: Learning and Internalizing Model-Free Barrier Objectives for Agile and Safe Whole-Body Control.&rdquo;
+        <span class="venue">Submitted to IEEE ICRA, 2027.</span>
+      </li>
+      <li>
+        <strong>Flores, A. M.</strong>, Lintu, N., et al.
+        &ldquo;Around the World: Unified Learned Locomotion on a 270&nbsp;g Continuous-Rotation Quadruped.&rdquo;
+        <span class="venue">Submitted to IEEE ICRA, 2027.</span>
+      </li>
+    </ol>
+    <p class="footnote">* Equal contribution.</p>
+
+    <h3>Conference</h3>
+    <ol class="pubs">
+      <li>
+        <strong>Flores, A. M.</strong>, Zargarbashi, F., Liu, H., et al.
+        &ldquo;Learning to Walk in Costume: Adversarial Motion Priors for Aesthetically Constrained Humanoids.&rdquo;
+        <span class="venue">IEEE Humanoids, 2025.</span>
+        <a href="https://arxiv.org/abs/2509.05581">arXiv</a>
+      </li>
+      <li>
+        Liu, H., Zhu, M., <strong>Flores, A. M.</strong>, et al.
+        &ldquo;From Screen to Stage: Kid Cosmo, A Life-Like, Torque-Controlled Humanoid for Entertainment Robotics.&rdquo;
+        <span class="venue">IEEE Humanoids, 2025.</span>
+        <span class="award">Mike Stilman Award</span>
+        <a href="https://arxiv.org/abs/2508.11884">arXiv</a>
+      </li>
+      <li>
+        <strong>Flores, A. M.</strong>, Morales, A., Campos, G., Gelso, J.
+        &ldquo;Energy Efficiency Using IOTA Tangle for Greenhouse Agriculture.&rdquo;
+        <span class="venue">Information Management and Big Data (SIMBig 2021), CCIS vol.&nbsp;1577, Springer, 2022.</span>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-04447-2_9">link</a>
+      </li>
+      <li>
+        Cevallos, B., Jamanca, G., Napan, J., <strong>Flores, A. M.</strong>, Vásquez, Y.
+        &ldquo;FISHER-X: A Bioinspired Robotic Alternative for the Exploration of the Oceanic Environment on a Jupiter&rsquo;s Moon.&rdquo;
+        <span class="venue">International Astronautical Congress, 2022.</span>
+        <a href="https://iafastro.directory/iac/archive/browse/IAC-22/A3/5/67829/">link</a>
+      </li>
+    </ol>
+
+    <h3>Journal</h3>
+    <ol class="pubs">
+      <li>
+        <strong>Flores, A. M.</strong>, Egidio, L. N., Deaecto, G. S.
+        &ldquo;Cooperative Networked Control Based on a Time-Varying Lyapunov Function.&rdquo;
+        <span class="venue">Journal of Control, Automation and Electrical Systems 32, Springer, 533&ndash;542, 2021.</span>
+        <a href="https://doi.org/10.1007/s40313-021-00709-w">doi</a>
+      </li>
+    </ol>
+
+    <h3>Exhibition</h3>
+    <ol class="pubs">
+      <li>
+        Zhu, M., Liu, H., <strong>Flores, A. M.</strong>, et al.
+        &ldquo;Kid COSMO: A Humanoid Robot Movie Character.&rdquo;
+        <span class="venue">ICRA EXPO, 2025.</span>
+        <span class="award">Best Exhibition Award</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ─────────────────────────── awards ─────────────────────────── -->
+  <section id="awards">
+    <h2>Honors &amp; Awards</h2>
+    <ul class="awards">
+      <li><span class="when">2025</span><span class="what">Amazon AI PhD Fellowship</span></li>
+      <li><span class="when">2025</span><span class="what">Mike Stilman Award, IEEE Humanoids</span></li>
+      <li><span class="when">2025</span><span class="what">Best Exhibition Award, ICRA EXPO</span></li>
+      <li><span class="when">2024</span><span class="what">Winner, Adult Size league, RoboCup, Eindhoven</span></li>
+      <li><span class="when">2023</span><span class="what">Winner, Humanoid Free Walk, IEEE Humanoids, Austin</span></li>
+      <li><span class="when">2023</span><span class="what">ETH RobotX Fellowship &mdash; 8.9% acceptance rate</span></li>
+      <li><span class="when">2021</span><span class="what">Research Experience for Peruvian Undergraduates (REPU)</span></li>
+      <li><span class="when">2019</span><span class="what">Telemetry Award, NASA Human Exploration Rover Challenge</span></li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────── teaching ─────────────────────────── -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul class="awards">
+      <li><span class="when">2023</span><span class="what">Kinematics of Robotic Systems (graduate) &mdash; Teaching Assistant, UCLA MAE</span></li>
+      <li><span class="when">2023</span><span class="what">Introduction to Programming with MATLAB (undergraduate) &mdash; Teaching Assistant, UCLA MAE</span></li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────── media ─────────────────────────── -->
+  <section id="media">
+    <h2>Media</h2>
+    <div class="media-grid">
+      <figure>
+        <div class="embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/6y75UbYwfy0" title="ChatEMIS: offline conversational AI for RoMeLa humanoids" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <figcaption>ChatEMIS &mdash; a fully offline RAG conversational system running on a Jetson Orin Nano.
+          <a href="https://github.com/TheNewRobot/chatemis">code</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/eFG54nw8Ntw" title="Kid COSMO balancing via imitation learning" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <figcaption>Kid COSMO balancing, from a C++ ONNX sim-to-real pipeline deploying imitation-learning policies.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    <a href="mailto:afloresa@ucla.edu">afloresa@ucla.edu</a> &middot;
+    Engineering&nbsp;IV, UCLA, Los Angeles, CA
+  </p>
+  <p class="muted">Last updated September 2026.</p>
+</footer>
+
+<script src="js/lineup.js"></script>
+</body>
+</html>
