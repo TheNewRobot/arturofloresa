@@ -47,6 +47,23 @@
             'optimization-based dynamics calibration in MuJoCo, and sim2sim validation in mjlab.'
     },
     {
+      id: 'hightorque',
+      name: 'High-Torque Humanoid',
+      img: 'img/robots/hightorque.png',
+      height: 1.20,
+      heightLabel: '1.20 m',
+      estimated: true,        /* no published spec — Arturo to confirm */
+      lab: 'RoMeLa, UCLA',
+      year: '2025–26',
+      sim: true, hardware: true,
+      award: null,
+      text: 'Full-stack humanoid control on an in-development platform. Building a C++ ROS2 stack ' +
+            'covering hardware integration, multi-threaded state estimation, RL-based locomotion ' +
+            'control and template-model-based adaptation for robust real-time walking through ' +
+            'hardware development cycles, with cross-compiled embedded software for motor ' +
+            'controllers and real-time control loops in modern C++ on Linux targets.'
+    },
+    {
       id: 'g1',
       name: 'Unitree G1',
       img: 'img/robots/g1.png',
@@ -156,7 +173,7 @@
     lab.className = 'robot-label';
     lab.innerHTML = '<b></b><span class="lh"></span><span class="ly"></span>';
     lab.querySelector('b').textContent = r.name;
-    lab.querySelector('.lh').textContent = r.heightLabel;
+    lab.querySelector('.lh').textContent = (r.estimated ? '~' : '') + r.heightLabel;
     lab.querySelector('.ly').textContent = r.year;
     lab.addEventListener('click', function () { select(i); buttons[i].focus(); });
     labelRow.appendChild(lab);
@@ -188,11 +205,14 @@
     if (r.hardware) { badges += '<span class="badge">Hardware</span>'; }
     if (r.award)    { badges += '<span class="badge award">' + r.award + '</span>'; }
 
+    var h = (r.estimated ? '~' : '') + r.heightLabel +
+            (r.estimated ? ' <span class="prov">(height provisional)</span>' : '');
+
     detail.innerHTML =
       '<img class="detail-photo" src="' + r.img + '" alt="' + r.name + '">' +
       '<div class="detail-body">' +
         '<h4>' + r.name + '</h4>' +
-        '<p class="meta">' + r.lab + ' · ' + r.year + ' · ' + r.heightLabel + '</p>' +
+        '<p class="meta">' + r.lab + ' · ' + r.year + ' · ' + h + '</p>' +
         '<div class="badges">' + badges + '</div>' +
         '<p>' + r.text + '</p>' +
       '</div>';

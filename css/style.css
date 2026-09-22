@@ -372,6 +372,11 @@ h1 {
   margin: 0 0 2px;
 }
 
+.platform-detail .prov {
+  color: #8a5a00;
+  font-style: italic;
+}
+
 .platform-detail .meta {
   font-size: 0.8rem;
   color: var(--ink-faint);
