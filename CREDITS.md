@@ -9,12 +9,19 @@ height. Sources and licences below.
 | `miniq.png` | MiNI-Q | your photo (`q8bot.png`) | Yours. |
 | `cosmo.png` | Kid COSMO | your photo (`cosmo.jpg`) | Yours. |
 | `hightorque.png` | High-Torque Humanoid | your photo (`high_torque.png`) | Yours. |
-| `artemis.png` | ARTEMIS | `artemis.romela.org/static/images/robocup_standing.jpg` | Your own lab — worth a nod to whoever took it. |
-| `g1.png` | Unitree G1 | Wikimedia Commons, [`Unitree G1.jpg`](https://commons.wikimedia.org/wiki/File:Unitree_G1.jpg) | **CC0** — public domain, no permission needed. |
+| `artemis.png` | ARTEMIS | `artemis.romela.org/static/images/campus1.jpg` | Your own lab. Re-cut from the campus shot so the soccer ball is no longer fused into the silhouette. |
+| `g1.png` | Unitree G1 | your file (`G1.png`) | Yours. Replaced the CC0 crowd photo. |
 | `t1.png` | Booster T1 | `booster.tech` product image | Manufacturer press image. **Review**, or replace with your own RoboCup photo. |
-| `h12.png` | Unitree H1-2 | `unitree.com` product render | Manufacturer render. **Confirm this is H1-2 and not H1** — the two renders on their site are unlabelled and near-identical. Your own IHMC photo fixes both this and the licence question. |
+| `h12.png` | Unitree H1-2 | your file (`H1-2.png`) | Yours. Settles the earlier H1 vs H1-2 ambiguity. |
 
-Four of the seven are now your own photographs.
+Six of the seven are now your own or your lab's. Only the Booster T1 press
+render is third-party.
+
+Both `G1.png` and `H1-2.png` are in dynamic poses (bent knees, raised arm).
+Since each image is scaled so its bounding box equals the robot's real height,
+a crouched robot gets drawn slightly bulkier than it is. The head-height
+reading stays correct, which is what the chart is for, but a standing shot
+would be marginally more faithful.
 
 ## Headshot
 

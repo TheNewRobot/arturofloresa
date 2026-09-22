@@ -250,4 +250,16 @@
       moreBtn.textContent = open ? 'Show less' : 'Show more';
     });
   }
+
+  /* ---------- bio: more about me ---------- */
+  var bioBtn = document.getElementById('bio-more-btn');
+  var bioMore = document.getElementById('bio-more');
+  if (bioBtn && bioMore) {
+    bioBtn.addEventListener('click', function () {
+      var open = bioMore.hidden;
+      bioMore.hidden = !open;
+      bioBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      bioBtn.textContent = open ? 'Less' : 'More about me';
+    });
+  }
 })();

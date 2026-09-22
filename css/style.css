@@ -176,6 +176,11 @@ p:last-child { margin-bottom: 0; }
   padding: 48px 0 40px;
 }
 
+.masthead-aside {
+  flex: none;
+  width: 260px;
+}
+
 .portrait {
   width: 260px;
   height: 260px;
@@ -203,20 +208,24 @@ h1 {
   margin: 0 0 18px;
 }
 
+/* vertical stack under the portrait — the inline row wrapped badly and
+   orphaned links once there were five of them */
 .contact {
   list-style: none;
-  margin: 0;
+  margin: 14px 0 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 0;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
-.contact li:not(:last-child)::after {
-  content: "·";
-  color: var(--rule);
-  margin: 0 10px;
+.contact li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  overflow-wrap: anywhere;
 }
+.contact li:last-child { border-bottom: none; }
+.contact a { border-bottom: none; }
+.contact a:hover { text-decoration: underline; }
+
 
 /* ---------- the platform lineup ---------- */
 .lineup-wrap {
@@ -229,7 +238,6 @@ h1 {
   position: relative;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
   gap: 4px;
   height: var(--plot-h);   /* the tallest robot, 1.78 m, maps to this */
   overflow: visible;
@@ -273,6 +281,9 @@ h1 {
 .lineup-scale span:nth-child(2) { top: calc(var(--plot-h) - (var(--plot-h) / 1.78)); }
 .lineup-scale span:nth-child(3) { top: 0; }
 
+/* Equal-width columns, matching .robot-label exactly, so every silhouette is
+   centred over its own name. (They previously used different flex rules, which
+   put each robot slightly off its label — most visible on the tiny MiNI-Q.) */
 .robot {
   appearance: none;
   background: none;
@@ -284,8 +295,9 @@ h1 {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  flex: 1 1 0;
+  min-width: 38px;
   height: 100%;            /* gives the % heights below a definite basis */
-  min-width: 38px;         /* keeps MiniQ clickable despite being ~19 px tall */
   font-family: inherit;
 }
 
@@ -295,6 +307,11 @@ h1 {
 .robot img {
   display: block;
   width: auto;
+  /* max-width must stay unset: the global img{max-width:100%} capped the width
+     to the column, and object-fit then letterboxed the robot — which drew the
+     1.78 m H1-2 22% shorter than its true height and broke the whole premise
+     of the chart. Height alone governs; widths still total less than the row. */
+  max-width: none;
   object-fit: contain;
   object-position: bottom center;
   filter: brightness(0) opacity(0.3);
@@ -315,7 +332,6 @@ h1 {
 
 .robot-labels {
   display: flex;
-  justify-content: space-between;
   gap: 4px;
   margin-left: var(--plot-pad);
   padding-top: 7px;
@@ -491,6 +507,24 @@ h1 {
   vertical-align: 1px;
 }
 
+/* ---------- press ---------- */
+.press {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.press li {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  font-size: 0.95rem;
+}
+.press li:last-child { border-bottom: none; }
+.press .venue { display: block; font-size: 0.86rem; }
+
+/* ---------- bio expander ---------- */
+.more[hidden] { display: none; }
+.more p:first-child { margin-top: 4px; }
+
 /* ---------- media ---------- */
 .media-grid {
   display: grid;
@@ -543,13 +577,18 @@ footer p { margin: 0 0 4px; }
     gap: 22px;
     padding: 30px 0 28px;
   }
+  .masthead-aside { width: 100%; }
   .portrait { width: 168px; height: 168px; }
+  .contact { margin-top: 12px; }
   h1 { font-size: 1.68rem; }
 
   /* The chart shrinks to fit rather than scrolling: the whole point is seeing
      every robot against every other one at once. True scale is preserved —
      only the mapping from metres to pixels changes. */
-  :root { --plot-h: 196px; --plot-pad: 30px; }
+  /* Chart must fit the viewport without scrolling — seeing every robot against
+     every other one at once is the point. Total silhouette width scales with
+     --plot-h, so this is the largest value that fits a 390 px screen. */
+  :root { --plot-h: 146px; --plot-pad: 26px; }
 
   .lineup { gap: 2px; }
   .robot { min-width: 26px; padding: 0; }

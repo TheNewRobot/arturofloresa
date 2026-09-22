@@ -27,10 +27,10 @@
   <div class="topnav-inner">
     <span class="topnav-name">Arturo M. Flores Alvarez</span>
     <ul>
-      <li><a href="#platforms">Platforms</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#awards">Awards</a></li>
+      <li><a href="#platforms">Platforms</a></li>
       <li><a href="pdfs/Flores_Arturo_CV.pdf">CV</a></li>
     </ul>
   </div>
@@ -38,16 +38,11 @@
 
 <main>
 
-  <!-- ─────────────────────────── header ─────────────────────────── -->
+  <!-- header -->
   <header class="masthead">
-    <img class="portrait" src="img/headshot.jpg" width="260" height="260"
-         alt="Arturo M. Flores Alvarez">
-    <div class="masthead-text">
-      <h1>Arturo M. Flores Alvarez</h1>
-      <p class="standfirst">
-        PhD Candidate, Mechanical Engineering &middot; University of California, Los Angeles<br>
-        Robotics and Mechanisms Laboratory (RoMeLa) &middot; Amazon AI PhD Fellow
-      </p>
+    <div class="masthead-aside">
+      <img class="portrait" src="img/headshot.jpg" width="260" height="260"
+           alt="Arturo M. Flores Alvarez">
       <ul class="contact">
         <li><a href="mailto:afloresa@ucla.edu">afloresa@ucla.edu</a></li>
         <li><a href="https://scholar.google.com/citations?user=xQZhAFsAAAAJ&amp;hl=es">Google Scholar</a></li>
@@ -56,9 +51,16 @@
         <li><a href="pdfs/Flores_Arturo_CV.pdf">Curriculum Vitae</a></li>
       </ul>
     </div>
+    <div class="masthead-text">
+      <h1>Arturo M. Flores Alvarez</h1>
+      <p class="standfirst">
+        PhD Candidate, Mechanical Engineering &middot; University of California, Los Angeles<br>
+        Robotics and Mechanisms Laboratory (RoMeLa) &middot; Amazon AI PhD Fellow
+      </p>
+    </div>
   </header>
 
-  <!-- ─────────────────────────── bio ─────────────────────────── -->
+  <!-- bio -->
   <section id="bio">
     <p>
       I am a PhD candidate in Mechanical Engineering at UCLA, advised by
@@ -72,84 +74,49 @@
       I hold an M.S. from UCLA (2024) and a B.Sc. in Mechatronics Engineering from the
       Universidad Nacional de Ingeniería in Lima, Peru. I have been an Applied Scientist
       intern at <strong>Amazon Robotics</strong>, working on forceful loco-manipulation, and a
-      humanoid robotics software intern at <strong>IHMC</strong>, leading whole-body control
-      bring-up on hardware. I was an <strong>ETH RobotX Fellow</strong> in 2023, and before
-      graduate school I worked on switched control systems at UNICAMP in Brazil.
-    </p>
-  </section>
-
-  <!-- ─────────────────────────── platforms ─────────────────────────── -->
-  <section id="platforms">
-    <h2>Platforms</h2>
-    <p class="section-note">
-      Robots I have worked on, drawn to true relative height &mdash; from a 270&nbsp;g
-      quadruped to a 1.78&nbsp;m humanoid. On each one the work spans both simulation and
-      deployment on the physical machine. Select a robot for detail.
+      <strong>humanoid whole-body control</strong> intern at <strong>IHMC</strong>, where I led
+      hardware bring-up of the H1-2 control stack. I was an <strong>ETH RobotX Fellow</strong>
+      in 2023, and before graduate school I worked on switched control systems at UNICAMP in
+      Brazil.
     </p>
 
-    <div class="lineup-wrap">
-      <div class="lineup" id="lineup" role="tablist" aria-label="Robot platforms">
-        <!-- populated by js/lineup.js; see noscript fallback below -->
-      </div>
-      <div class="lineup-baseline" aria-hidden="true"></div>
-      <div class="lineup-scale" aria-hidden="true">
-        <span>0&nbsp;m</span><span>1&nbsp;m</span><span>1.8&nbsp;m</span>
-      </div>
+    <div class="more" id="bio-more" hidden>
+      <p>
+        Before robotics took over entirely, I trained as an <strong>analog astronaut</strong>,
+        earning a scholarship to a low-fidelity analog mission with MMAARS. That is roughly
+        where my interest in building machines for places people cannot easily reach began.
+        Away from the lab I write, I draw, and I read more science fiction than is strictly
+        defensible.
+      </p>
+      <p>
+        The same thread runs through all of it. Humanoids are general-purpose machines, and
+        general-purpose machines are what let us work somewhere before we can live there. If we
+        are serious about settling anywhere beyond Earth, something has to do the building
+        first. <em>Ad astra.</em>
+      </p>
     </div>
-
-    <div class="platform-detail" id="platform-detail" aria-live="polite"></div>
-
-    <!-- The real content lives here, in HTML, so it is present for search
-         engines and without JavaScript. js/lineup.js hides this list and
-         builds the interactive chart from the same data. -->
-    <ul class="platform-fallback" id="platform-list">
-      <li><strong>MiNI-Q</strong> — RoMeLa, UCLA, 2026 (11 cm, 270 g). Simulation and hardware.
-        Unified learned locomotion on a 270&nbsp;g quadruped with eight continuous-rotation legs;
-        a ~26k-parameter policy runs entirely onboard a dual-ESP32 system at 50&nbsp;Hz.
-        Submitted to ICRA 2027.</li>
-      <li><strong>Booster T1</strong> — RoMeLa, UCLA, 2026 (1.18 m). Simulation and hardware.
-        Reinforcement learning and software lead for RoboCup 2026, migrating ARTEMIS&rsquo;s
-        model-based ROS2 stack to a learning-based one with an end-to-end RL locomotion
-        pipeline in Isaac Gym.</li>
-      <li><strong>High-Torque Humanoid</strong> — RoMeLa, UCLA, 2025&ndash;26 (~1.20 m, provisional).
-        Simulation and hardware. Full-stack C++ ROS2 control on an in-development platform:
-        hardware integration, multi-threaded state estimation, RL-based locomotion control and
-        template-model-based adaptation for robust real-time walking.</li>
-      <li><strong>Unitree G1</strong> — Amazon Robotics, 2026 (1.32 m). Simulation and hardware.
-        Whole-body control for forceful loco-manipulation, combining model predictive control,
-        control-barrier-function safety layers and learning-based methods.</li>
-      <li><strong>ARTEMIS</strong> — RoMeLa, UCLA, 2023&ndash;24 (1.42 m). Simulation and hardware.
-        Real-time computer vision and ball tracking for soccer. Winner of the Adult Size league
-        at RoboCup 2024, and first place in the Humanoid Free Walk at IEEE Humanoids 2023.</li>
-      <li><strong>Kid COSMO</strong> — RoMeLa, UCLA, 2024&ndash;25 (1.45 m). Simulation and hardware.
-        C++17 upper-body control and a C++ ONNX sim-to-real pipeline for imitation-learning
-        balance and walking. Mike Stilman Award, IEEE Humanoids 2025.</li>
-      <li><strong>Unitree H1-2</strong> — IHMC, 2025 (1.78 m). Simulation and hardware.
-        Led hardware bring-up of the whole-body control stack and built a WBMPC robustness
-        testing framework across the Nadia and H1-2 humanoids.</li>
-    </ul>
+    <button class="morebtn" id="bio-more-btn" type="button" aria-expanded="false"
+            aria-controls="bio-more">More about me</button>
   </section>
 
-  <!-- ─────────────────────────── news ─────────────────────────── -->
+  <!-- news -->
   <section id="news">
     <h2>News</h2>
     <ul class="news">
-      <li><span class="when">Sep 2026</span><span class="what">Finished an Applied Scientist II internship at Amazon Robotics; two papers submitted to ICRA 2027.</span></li>
-      <li><span class="when">Sep 2025</span><span class="what">Two papers at IEEE Humanoids 2025 &mdash; <em>From Screen to Stage</em> received the <strong>Mike Stilman Award</strong>.</span></li>
-      <li><span class="when">Sep 2025</span><span class="what">Completed a humanoid robotics software internship at IHMC, leading whole-body control bring-up on the H1-2.</span></li>
-      <li><span class="when">May 2025</span><span class="what">Kid COSMO won <strong>Best Exhibition</strong> at the ICRA 2025 EXPO.</span></li>
-      <li><span class="when">Jul 2024</span><span class="what">ARTEMIS won the Adult Size league at <strong>RoboCup 2024</strong> in Eindhoven.</span></li>
+      <li><span class="when">Sep 2026</span><span class="what">Finished an Applied Scientist II internship with the Amazon Industrial Robotics group, co-leading two projects submitted to ICRA 2027.</span></li>
+      <li><span class="when">Jun 2026</span><span class="what">Leading the RoboCup 2026 software team, migrating RoMeLa&rsquo;s stack to a learning-based pipeline on the Booster T1.</span></li>
+      <li><span class="when">Sep 2025</span><span class="what">Two contributed papers presented at IEEE Humanoids 2025.</span></li>
+      <li><span class="when">Sep 2025</span><span class="what">Completed a humanoid whole-body control internship at IHMC, leading hardware bring-up on the H1-2.</span></li>
       <li><span class="when">Jun 2024</span><span class="what">M.S. in Mechanical Engineering conferred at UCLA.</span></li>
-      <li class="extra"><span class="when">Dec 2023</span><span class="what">First place in the Humanoid Free Walk at IEEE Humanoids 2023, Austin.</span></li>
-      <li class="extra"><span class="when">May 2023</span><span class="what">Selected as an ETH RobotX Fellow (8.9% acceptance rate).</span></li>
-      <li class="extra"><span class="when">Dec 2022</span><span class="what">Awarded a teaching assistantship at UCLA MAE for Introduction to Programming with MATLAB.</span></li>
-      <li class="extra"><span class="when">Dec 2021</span><span class="what">Selected for REPU, a national research programme placing Peruvian undergraduates abroad.</span></li>
-      <li class="extra"><span class="when">Apr 2019</span><span class="what">Telemetry Award at the NASA Human Exploration Rover Challenge, Huntsville.</span></li>
+      <li><span class="when">Jul 2023</span><span class="what">Visiting researcher at the Computational Robotics Lab, ETH Zurich.</span></li>
+      <li class="extra"><span class="when">Apr 2025</span><span class="what">Completed CUDA parallel programming for NVIDIA GPUs.</span></li>
+      <li class="extra"><span class="when">Dec 2022</span><span class="what">Awarded teaching assistantships at UCLA MAE for MATLAB and for Kinematics of Robotic Systems.</span></li>
+      <li class="extra"><span class="when">Sep 2022</span><span class="what">Began the PhD at UCLA, joining RoMeLa under Dennis Hong.</span></li>
+      <li class="extra"><span class="when">Dec 2019</span><span class="what">Research internship in control systems at UNICAMP, Brazil.</span></li>
     </ul>
     <button class="morebtn" id="news-more" type="button" aria-expanded="false">Show more</button>
   </section>
 
-  <!-- ─────────────────────────── publications ─────────────────────────── -->
   <section id="publications">
     <h2>Publications</h2>
 
@@ -223,7 +190,6 @@
     </ol>
   </section>
 
-  <!-- ─────────────────────────── awards ─────────────────────────── -->
   <section id="awards">
     <h2>Honors &amp; Awards</h2>
     <ul class="awards">
@@ -238,34 +204,81 @@
     </ul>
   </section>
 
-  <!-- ─────────────────────────── teaching ─────────────────────────── -->
+  <!-- platforms -->
+  <section id="platforms">
+    <h2>Platforms</h2>
+    <p class="section-note">
+      Robots I have worked on, drawn to true relative height &mdash; from a 270&nbsp;g
+      quadruped to a 1.78&nbsp;m humanoid. On each one the work spans both simulation and
+      deployment on the physical machine. Select a robot for detail.
+    </p>
+
+    <div class="lineup-wrap">
+      <div class="lineup" id="lineup" role="tablist" aria-label="Robot platforms">
+        <!-- populated by js/lineup.js -->
+      </div>
+      <div class="lineup-baseline" aria-hidden="true"></div>
+      <div class="lineup-scale" aria-hidden="true">
+        <span>0&nbsp;m</span><span>1&nbsp;m</span><span>1.8&nbsp;m</span>
+      </div>
+    </div>
+
+    <div class="platform-detail" id="platform-detail" aria-live="polite"></div>
+
+    <!-- The real content lives here, in HTML, so it is present for search engines
+         and without JavaScript. js/lineup.js hides this list and builds the
+         interactive chart from the same data. -->
+    <ul class="platform-fallback" id="platform-list">
+      <li><strong>MiNI-Q</strong> &mdash; RoMeLa, UCLA, 2026 (11 cm, 270 g). Simulation and hardware.
+        Unified learned locomotion on a 270&nbsp;g quadruped with eight continuous-rotation legs;
+        a ~26k-parameter policy runs entirely onboard a dual-ESP32 system at 50&nbsp;Hz.
+        Submitted to ICRA 2027.</li>
+      <li><strong>Booster T1</strong> &mdash; RoMeLa, UCLA, 2026 (1.18 m). Simulation and hardware.
+        Reinforcement learning and software lead for RoboCup 2026, migrating ARTEMIS&rsquo;s
+        model-based ROS2 stack to a learning-based one with an end-to-end RL locomotion
+        pipeline in Isaac Gym.</li>
+      <li><strong>High-Torque Humanoid</strong> &mdash; RoMeLa, UCLA, 2025&ndash;26 (~1.20 m, provisional).
+        Simulation and hardware. Full-stack C++ ROS2 control on an in-development platform:
+        hardware integration, multi-threaded state estimation, RL-based locomotion control and
+        template-model-based adaptation for robust real-time walking.</li>
+      <li><strong>Unitree G1</strong> &mdash; Amazon Robotics, 2026 (1.32 m). Simulation and hardware.
+        Whole-body control for forceful loco-manipulation, combining model predictive control,
+        control-barrier-function safety layers and learning-based methods.</li>
+      <li><strong>ARTEMIS</strong> &mdash; RoMeLa, UCLA, 2023&ndash;24 (1.42 m). Simulation and hardware.
+        Real-time computer vision and ball tracking for soccer. Winner of the Adult Size league
+        at RoboCup 2024, and first place in the Humanoid Free Walk at IEEE Humanoids 2023.</li>
+      <li><strong>Kid COSMO</strong> &mdash; RoMeLa, UCLA, 2024&ndash;25 (1.45 m). Simulation and hardware.
+        C++17 upper-body control and a C++ ONNX sim-to-real pipeline for imitation-learning
+        balance and walking. Mike Stilman Award, IEEE Humanoids 2025.</li>
+      <li><strong>Unitree H1-2</strong> &mdash; IHMC, 2025 (1.78 m). Simulation and hardware.
+        Led hardware bring-up of the whole-body control stack and built a WBMPC robustness
+        testing framework across the Nadia and H1-2 humanoids.</li>
+    </ul>
+  </section>
+
+  <!-- teaching -->
   <section id="teaching">
     <h2>Teaching</h2>
     <ul class="awards">
-      <li><span class="when">2023</span><span class="what">Kinematics of Robotic Systems (graduate) &mdash; Teaching Assistant, UCLA MAE</span></li>
+      <li><span class="when">2023&ndash;2025</span><span class="what">Kinematics of Robotic Systems (graduate) &mdash; Teaching Assistant, UCLA MAE</span></li>
       <li><span class="when">2023</span><span class="what">Introduction to Programming with MATLAB (undergraduate) &mdash; Teaching Assistant, UCLA MAE</span></li>
     </ul>
   </section>
 
-  <!-- ─────────────────────────── media ─────────────────────────── -->
-  <section id="media">
-    <h2>Media</h2>
-    <div class="media-grid">
-      <figure>
-        <div class="embed">
-          <iframe src="https://www.youtube-nocookie.com/embed/6y75UbYwfy0" title="ChatEMIS: offline conversational AI for RoMeLa humanoids" loading="lazy" allowfullscreen></iframe>
-        </div>
-        <figcaption>ChatEMIS &mdash; a fully offline RAG conversational system running on a Jetson Orin Nano.
-          <a href="https://github.com/TheNewRobot/chatemis">code</a>
-        </figcaption>
-      </figure>
-      <figure>
-        <div class="embed">
-          <iframe src="https://www.youtube-nocookie.com/embed/eFG54nw8Ntw" title="Kid COSMO balancing via imitation learning" loading="lazy" allowfullscreen></iframe>
-        </div>
-        <figcaption>Kid COSMO balancing, from a C++ ONNX sim-to-real pipeline deploying imitation-learning policies.</figcaption>
-      </figure>
-    </div>
+  <!-- press -->
+  <section id="press">
+    <h2>Press</h2>
+    <ul class="press">
+      <li>
+        <a href="https://elperuano.pe/noticia/175013-el-joven-peruano-que-suena-conquistar-la-nasa">El joven peruano que sueña conquistar la NASA</a>
+        <span class="venue">El Peruano &mdash; profile interview (Spanish)</span>
+      </li>
+      <li>
+        <a href="https://larepublica.pe/ciencia/2022/10/24/investigadores-peruanos-disenan-pez-robot-para-buscar-vida-en-europa-luna-de-jupiter-fisher-x/">Investigadores peruanos diseñan pez robot para buscar vida en Europa</a>
+        <span class="venue">La República &mdash; research interview on FISHER-X (Spanish)</span>
+      </li>
+      <!-- TODO(Arturo): the English interview goes here — send me the URL. -->
+    </ul>
   </section>
 
 </main>
