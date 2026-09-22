@@ -28,9 +28,35 @@
             'a dual-ESP32 system at 50 Hz — no off-board compute and no wireless link in the control loop. ' +
             'Submitted to ICRA 2027.'
     },
-    /* DARwIn-OP belongs here (RoMeLa, 0.45 m) but is held back until Arturo
-       supplies a standing photo and one line of description — a crouched stand-in
-       would put a wrong height into a chart whose whole point is true scale. */
+    {
+      id: 'darwin',
+      name: 'DARwIn-OP',
+      img: 'img/robots/darwin.png',
+      height: 0.46,
+      heightLabel: '46 cm',
+      lab: 'RoMeLa, UCLA',
+      year: '\u2014',
+      sim: true, hardware: true,
+      award: null,
+      text: 'RoMeLa\u2019s open-platform humanoid, and the ancestor of the lab\u2019s later machines. ' +
+            'Work here spanned both simulation and the physical robot.'
+    },
+    {
+      id: 'hightorque',
+      name: 'High-Torque Humanoid',
+      img: 'img/robots/hightorque.png',
+      height: 0.90,
+      heightLabel: '90 cm',
+      lab: 'RoMeLa, UCLA',
+      year: '2025\u201326',
+      sim: true, hardware: true,
+      award: null,
+      text: 'Full-stack humanoid control on an in-development platform. Building a C++ ROS2 stack ' +
+            'covering hardware integration, multi-threaded state estimation, RL-based locomotion ' +
+            'control and template-model-based adaptation for robust real-time walking through ' +
+            'hardware development cycles, with cross-compiled embedded software for motor ' +
+            'controllers and real-time control loops in modern C++ on Linux targets.'
+    },
     {
       id: 't1',
       name: 'Booster T1',
@@ -45,23 +71,6 @@
             'ARTEMIS’s model-based ROS2 Foxy stack to a learning-based ROS2 Humble stack, with an end-to-end ' +
             'RL locomotion pipeline in Isaac Gym, sim-to-real transfer via per-joint sysID and ' +
             'optimization-based dynamics calibration in MuJoCo, and sim2sim validation in mjlab.'
-    },
-    {
-      id: 'hightorque',
-      name: 'High-Torque Humanoid',
-      img: 'img/robots/hightorque.png',
-      height: 1.20,
-      heightLabel: '1.20 m',
-      estimated: true,        /* no published spec — Arturo to confirm */
-      lab: 'RoMeLa, UCLA',
-      year: '2025–26',
-      sim: true, hardware: true,
-      award: null,
-      text: 'Full-stack humanoid control on an in-development platform. Building a C++ ROS2 stack ' +
-            'covering hardware integration, multi-threaded state estimation, RL-based locomotion ' +
-            'control and template-model-based adaptation for robust real-time walking through ' +
-            'hardware development cycles, with cross-compiled embedded software for motor ' +
-            'controllers and real-time control loops in modern C++ on Linux targets.'
     },
     {
       id: 'g1',

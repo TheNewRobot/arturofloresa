@@ -11,10 +11,11 @@ height. Sources and licences below.
 | `hightorque.png` | High-Torque Humanoid | your photo (`high_torque.png`) | Yours. |
 | `artemis.png` | ARTEMIS | `artemis.romela.org/static/images/campus1.jpg` | Your own lab. Re-cut from the campus shot so the soccer ball is no longer fused into the silhouette. |
 | `g1.png` | Unitree G1 | your file (`G1.png`) | Yours. Replaced the CC0 crowd photo. |
+| `darwin.png` | DARwIn-OP | your file (`darwin.jpg`) | Yours. |
 | `t1.png` | Booster T1 | `booster.tech` product image | Manufacturer press image. **Review**, or replace with your own RoboCup photo. |
 | `h12.png` | Unitree H1-2 | your file (`H1-2.png`) | Yours. Settles the earlier H1 vs H1-2 ambiguity. |
 
-Six of the seven are now your own or your lab's. Only the Booster T1 press
+Seven of the eight are now your own or your lab's. Only the Booster T1 press
 render is third-party.
 
 Both `G1.png` and `H1-2.png` are in dynamic poses (bent knees, raised arm).
@@ -35,8 +36,9 @@ The chart is only worth drawing if these are right.
 | Robot | Height | Source |
 |---|---|---|
 | MiNI-Q | 0.11 m (270 g) | confirmed by you; mass from your paper |
+| DARwIn-OP | 0.46 m | confirmed by you |
 | Booster T1 | 1.18 m | booster.tech specifications |
-| High-Torque Humanoid | **~1.20 m — provisional** | **my estimate; no published spec.** Shown on the page as `~1.20 m (height provisional)` until you give me the real number |
+| High-Torque Humanoid | 0.90 m | confirmed by you |
 | Unitree G1 | 1.32 m | unitree.com (130 cm on their spec card) |
 | ARTEMIS | 1.42 m | artemis.romela.org / UCLA newsroom |
 | Kid COSMO | 1.45 m | arXiv 2508.11884 |
@@ -45,12 +47,11 @@ The chart is only worth drawing if these are right.
 To change a height, edit the one `height:` value in `js/lineup.js`; the drawing
 follows automatically.
 
-## Still missing
+## Still open
 
-- **DARwIn-OP** (RoMeLa, 0.45 m) — not in the chart. Every freely available
-  image shows it seated or crouched, which would put a wrong height into a
-  true-scale chart. Needs a standing photo and one line on what you built on it;
-  it does not appear in your CV.
+- The **DARwIn-OP** entry describes the platform rather than your specific
+  contribution, because it is not in your CV and you have not given me a line.
+  Send one sentence and I will swap it in.
 
 ## CV
 
