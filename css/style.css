@@ -153,11 +153,12 @@ h3 {
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
 
+/* Full measure, not 62ch — the narrow cap made this read as a column sitting
+   in a wide empty space rather than as ordinary prose above the chart. */
 .section-note {
   color: var(--ink-soft);
   font-size: 0.95rem;
   margin: 12px 0 22px;
-  max-width: 62ch;
 }
 
 .footnote {
