@@ -85,7 +85,7 @@
       text: 'Whole-body control for forceful, industrially relevant loco-manipulation — combining model ' +
             'predictive control, control-barrier-function safety layers and learning-based methods. ' +
             'Built an automated batch-evaluation suite in mjlab for benchmarking whole-body controllers. ' +
-            'Two papers submitted to ICRA 2027 (HULK, LIMBO).'
+            'Two papers submitted to ICRA 2027.'
     },
     {
       id: 'artemis',
