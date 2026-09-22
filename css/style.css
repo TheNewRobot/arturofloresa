@@ -372,13 +372,16 @@ h1 {
   min-height: 150px;
 }
 
+/* Fixed box, robot centred inside it. The photo used to be bottom-aligned,
+   which left a wide, short robot (MiNI-Q is 420x298) sitting well below its
+   own heading. A fixed box also stops the panel jumping as you switch robots. */
 .detail-photo {
   flex: none;
-  width: 108px;
-  max-height: 150px;
+  width: 116px;
+  height: 136px;
   object-fit: contain;
-  object-position: bottom center;
-  align-self: flex-end;
+  object-position: center;
+  align-self: center;
 }
 
 .detail-body { min-width: 0; }
@@ -532,6 +535,11 @@ h1 {
 /* ---------- bio expander ---------- */
 .more[hidden] { display: none; }
 .more p:first-child { margin-top: 4px; }
+/* the global p:last-child{margin-bottom:0} zeroed this, so the expanded text
+   collided with the closing paragraph that follows the block */
+.more p:last-child { margin-bottom: 1em; }
+
+#bio-more-btn { margin: 4px 0 14px; }
 
 /* ---------- media ---------- */
 .media-grid {
@@ -605,7 +613,7 @@ footer p { margin: 0 0 4px; }
   .lineup-scale { font-size: 0.58rem; }
 
   .platform-detail { flex-direction: column; gap: 14px; padding: 16px; }
-  .detail-photo { width: 84px; max-height: 108px; align-self: flex-start; }
+  .detail-photo { width: 92px; height: 104px; align-self: center; }
 
   .news li, .awards li { flex-direction: column; gap: 1px; }
   .when { width: auto; }
