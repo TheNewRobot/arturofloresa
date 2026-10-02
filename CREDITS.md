@@ -56,5 +56,6 @@ follows automatically.
 ## CV
 
 `pdfs/Flores_Arturo_CV.pdf` was compiled with pdfLaTeX from the sibling
-Overleaf checkout, `../6aaed972815a2af28ef223bb/main.tex`, on 1 Oct 2026.
+Overleaf checkout, `../6aaed972815a2af28ef223bb/main.tex`, on 2 Oct 2026.
+It includes the accepted journal paper and RA-L reviewer service.
 Both CV links in `index.html` point to this updated two-page PDF.
