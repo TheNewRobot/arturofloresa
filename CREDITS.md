@@ -55,6 +55,6 @@ follows automatically.
 
 ## CV
 
-`pdfs/Flores_Arturo_CV.pdf` is `CV_Arturo_Flores_Official (1).pdf` from your
-Downloads, dated 21 Sep 2026 — the newest version. The site's content was
-checked against it.
+`pdfs/Flores_Arturo_CV.pdf` was compiled with pdfLaTeX from the sibling
+Overleaf checkout, `../6aaed972815a2af28ef223bb/main.tex`, on 1 Oct 2026.
+Both CV links in `index.html` point to this updated two-page PDF.
