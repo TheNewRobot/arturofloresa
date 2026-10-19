@@ -56,7 +56,8 @@ follows automatically.
 ## CV
 
 `pdfs/Flores_Arturo_CV.pdf` was compiled with pdfLaTeX from the sibling
-Overleaf checkout, `../6aaed972815a2af28ef223bb/main.tex` (commit `2185a48`),
-on 13 Oct 2026. It includes the accepted journal paper, RA-L reviewer service,
+Overleaf checkout, `../6aaed972815a2af28ef223bb/main.tex` (commit `fa62165`),
+on 19 Oct 2026. It includes the June 2028 PhD graduation date,
+the accepted journal paper, RA-L reviewer service,
 and the consolidated Amazon experience with the H100/Kubernetes training workflow.
 Both CV links in `index.html` point to this updated two-page PDF.
